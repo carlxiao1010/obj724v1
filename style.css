@@ -1,0 +1,229 @@
+/*Word (center)*/
+* {
+    text-align: center;
+    margin: auto;
+}
+
+/*Word*/
+
+body {
+    font-family: fantasy;
+    font-size: 2.8vw;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+/*3D model display*/
+
+.model {
+    display: inline-table;
+    width: 45vw;
+}
+
+/*3D model's image*/
+
+.model img {
+    width: 100%;
+}
+
+/*3D model and image frame*/
+
+iframe {
+    width: 100%;
+    height: 25.3vw;
+    border: 0;
+}
+
+/*Heading*/
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    width: 80%;
+    font-size: 14pt;
+}
+
+/*Home Text*/
+
+.contentA {
+    background: rgba(0, 0, 0, 0.5);
+    color: #5cf9ef;
+    width: 80%;
+    padding: 1%;
+    font-size: 20pt;
+}
+
+/*Process Text*/
+
+.contentB {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    width: 50%;
+    padding: 1%;
+    font-size: 12.5pt;
+}
+
+/*Inspiration Text*/
+
+.contentC {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    width: 55%;
+    font-size: 14pt;
+}
+
+/*Navigation Bar's open key*/
+
+.open {
+    color: #5cf9ef;
+    text-align: left;
+    padding-top: 0;
+}
+
+/*Navigation Bar's text type*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #262626;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/*Navigation Bar's text*/
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #c4c4c4;
+    display: block;
+    transition: 0.3s;
+}
+
+/*Navigation Bar's close key*/
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*Process Slide show*/
+
+.slideshow-container {
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+/*Inspiration Slide show*/
+
+.slideshow-container2 {
+    max-width: 45%;
+    position: relative;
+    margin: auto;
+}
+
+/*Prev and next key style.*/
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #5cf9ef;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/*Next key options*/
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*Prev key options*/
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*Next & Prev key options*/
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*Slideshow text*/
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/*Slideshow number text*/
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/*Slideshow animation*/
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/*Slideshows' animation*/
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}

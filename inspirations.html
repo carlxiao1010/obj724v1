@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title-->
+    <title>Inspirations</title>
+    <link rel=stylesheet href="style.css">
+</head>
+
+<body>
+    <div class="contentA">
+        <!--Heading-->
+        <h1>Inspirations</h1>
+    </div>
+    <!--Side navigation bar-->
+    <div id="mySidenav" class="sidenav">
+        <!--Link to java script-->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!--Link to my personal website-->
+        <a href="http://carlliangxiao.simplesite.com/">Personal Website</a>
+        <!--Link to the hompage-->
+        <a href="index.html">Home</a>
+        <!--Link to the process page-->
+        <a href="process.html">Process</a>
+        <!--Link to the inspiration page-->
+        <a href="inspirations.html">Inspirations</a>
+    </div>
+    <div class="open">
+        <!--To open the side navigation bar-->
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;ℹ️ </span>
+    </div>
+
+    <div class=row>
+        <!--Slideshow of idea-->
+        <div class="slideshow-container2">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1/3</div>
+                <img src="Images/tank_image/main.jpg" alt="white" style="width:55%">
+                <div class="text">Main turret comese from British FV215b(183) tank destroyer.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2/3</div>
+                <img src="Images/tank_image/front.jpg" alt="white" style="width:55%">
+                <div class="text">Front turret comes from Chinese Type 59 medium tank.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3/3</div>
+                <img src="Images/tank_image/body.jpg" alt="white" style="width:55%">
+                <div class="text">Body's idea comes from Japanese O-I super-heavy tank.</div>
+            </div>
+
+            <!--Next and Prev button.-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+
+        <!--Information-->
+        <div class="contentC">
+            <p>Most of my ideas came from real tank (or blue print) in.<br>In orginal novel, main turret have two soldier inside and with a 183mm ship gun. So the main turret turret's idea came from British blueprint the FV215b(183) tank destroyer. The FV215b(183) also has a 183 ship gun in it's blueprint.<br>The Front turret came from Chinese Type 59 (Object number WZ-120) medium tank. But this time I changed the gun into 152mm cannon, which not same with the 100mm gun in the real.<br>The body's idea came from Japanese O-I super heavy tank (blueprint), which also 120-150 tons. </p>
+        </div>
+    </div>
+    <script>
+        //Animatiuon Navigation bar
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        //Slideshow
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slidSeIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            if (dots[slideIndex - 1]) {
+                dots[slideIndex - 1].className += " active";
+            }
+        }
+
+    </script>

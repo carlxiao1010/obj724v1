@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title-->
+    <title>Process</title>
+    <link rel=stylesheet href="style.css">
+</head>
+
+<body>
+    <div class="contentA">
+        <!--Heading-->
+        <h1>Process</h1>
+    </div>
+    <!--Side navigation bar-->
+    <div id="mySidenav" class="sidenav">
+        <!--Link to java script-->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!--Link to my personal website-->
+        <a href="http://carlliangxiao.simplesite.com/">Personal Website</a>
+        <!--Link to the hompage-->
+        <a href="index.html">Home</a>
+        <!--Link to the process page-->
+        <a href="process.html">Process</a>
+        <!--Link to the inspiration page-->
+        <a href="inspirations.html">Inspirations</a>
+    </div>
+    <div class="open">
+        <!--To open the side navigation bar-->
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;ℹ️ </span>
+    </div>
+
+    <div class=row>
+        <!--Slideshow of the process-->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 7</div>
+                <img src="Images/process_sideshow/Obj724.png" alt="white" style="width:100%">
+                <div class="text">Full Version</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 7</div>
+                <img src="Images/process_sideshow/body.png" alt="white" style="width:100%">
+                <div class="text">Body</div>
+            </div>
+
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 7</div>
+                <img src="Images/process_sideshow/front%20turret.png" alt="white" style="width:100%">
+                <div class="text">Front Turret</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 7</div>
+                <img src="Images/process_sideshow/main%20turret.png" alt="white" style="width:100%">
+                <div class="text">Main Turret</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 7</div>
+                <img src="Images/process_sideshow/sup.png" alt="white" style="width:100%">
+                <div class="text">Suspension System</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 7</div>
+                <img src="Images/process_sideshow/non%20texture.JPG" alt="white" style="width:100%">
+                <div class="text">Full(No Texture and Render)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 7</div>
+                <img src="Images/obj.724-3.png" alt="white" style="width:100%">
+                <div class="text">Full(With Texture and Rendered)</div>
+            </div>
+            <!--Next and Prev button-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <!--Information-->
+        <div class="contentB">
+            <p>This model can separate into 4 parts, as you can see: Front Turret, Main/Middle Turret, Body and Suspension System.<br>One of the hardest part is front turret, because it's base on a half ball. I extrude for 2 hours and I get a half of turret like this. To make it symmetry，I copied and mirrored another one, and join them together. <br> For all the gun barrel and muzzle brake, I joined two tubes (not cylinder, with no top and bottom); I used cylinder in observe Turret (little Cylinders on the top of turrets) as well. <br>Another hard part is suspension system, there are many cylinders and rings in it.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        //Animatiuon Navigation bar
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        //Slideshow
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slidSeIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+             if (dots[slideIndex - 1]) {
+                dots[slideIndex - 1].className += " active";    
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
